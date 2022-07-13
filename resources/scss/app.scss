@@ -40,7 +40,7 @@ section.hero{
     }
 }
 .btn-primary{
-    background: $primary;
+    background: $primary-hover;
     transition: $smooth;
     &:hover{
         background: $primary-hover;
@@ -63,4 +63,7 @@ section.login{
 .noty_theme__mint {
     border-radius: 50px!important;
     padding-left: 8px!important;
+}
+a.link {
+    color: $primary;
 }
