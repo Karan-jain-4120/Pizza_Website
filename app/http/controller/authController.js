@@ -4,7 +4,7 @@ const passport = require('passport')
 function authController(){
 
     const _getRedirectUrl = (req) => {
-        return req.user.role === 'admin' ? '/admin/orders' : '/customer/orders'
+        return req.user.role === 'admin' ? '/admin/orders' : '/customers/orders'
     }
 
     return{
@@ -79,7 +79,7 @@ function authController(){
 
         user.save().then((user) => {
            // Login
-           return res.redirect('/')
+           return res.redirect('/login')
         }).catch(err => {
            req.flash('error', 'Something went wrong')
                return res.redirect('/register')
